@@ -1,0 +1,23 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:text="СТВОРИТИ НОВУ СЕСІЮ"
+        android:id="@+id/button2"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="120dp" />
+
+    <Button
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:text="ПІД'ЄДНАТИСЬ ДО ІСНУЮЧОЇ СЕСІЇ"
+        android:id="@+id/button4"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="70dp" />
+</LinearLayout>
