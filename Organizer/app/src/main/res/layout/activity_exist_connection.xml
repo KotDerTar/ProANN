@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:text="Під'єднання до існуючого підключення"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtName"
+        android:layout_marginTop="15dp"
+        android:hint="Ваше ім'я" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLink"
+        android:layout_marginTop="15dp"
+        android:hint="Посилання" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:layout_marginTop="15dp"
+        android:hint="Ваша пошта" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Під'єднатися"
+        android:id="@+id/btnMakeExistConnection"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:enabled="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Повернутися"
+        android:id="@+id/btnBackToMyActivity"
+        android:layout_marginTop="150dp"
+        android:onClick="goBackToMyActivity" />
+</LinearLayout>

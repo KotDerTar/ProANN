@@ -1,9 +1,11 @@
 package com.example.marko_polo.organizer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MyActivity extends Activity {
@@ -32,5 +34,10 @@ public class MyActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goToExistConnectionActivity (View v) {
+        Intent intent = new Intent(this, ExistConnectionActivity.class);
+        startActivity(intent);
     }
 }
