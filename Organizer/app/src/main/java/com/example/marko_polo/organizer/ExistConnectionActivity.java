@@ -9,6 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
 
 public class ExistConnectionActivity extends Activity {
 
@@ -46,4 +52,23 @@ public class ExistConnectionActivity extends Activity {
         Intent intent = new Intent(this, MyActivity.class);
         startActivity(intent);
     }
+
+    public void makeExistConnection () {
+        try{
+            Socket s = new Socket ("127.0.0.1", 4242);
+            InputStreamReader streamReader = new InputStreamReader(s.getInputStream());
+            BufferedReader reader = new BufferedReader(streamReader);
+
+            String advice = reader.readLine();
+            System.out.println("hello" + advice);
+            reader.close();
+        } catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+    public static  void main (String[] args) {
+        ExistConnectionActivity client = new ExistConnectionActivity();
+    client.makeExistConnection();
+    }
+
 }

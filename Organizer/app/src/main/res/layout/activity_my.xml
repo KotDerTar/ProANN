@@ -31,4 +31,5 @@
         android:id="@+id/btnHelp"
         android:layout_gravity="center_horizontal"
         android:onClick="goToHelpActivity" />
+
 </LinearLayout>
