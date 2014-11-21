@@ -12,7 +12,8 @@
         android:id="@+id/button2"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="120dp"
-        android:layout_marginRight="60dp" />
+        android:layout_marginRight="60dp"
+        android:onClick="MakeServer" />
 
     <Button
         android:layout_width="fill_parent"

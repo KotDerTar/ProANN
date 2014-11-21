@@ -22,6 +22,9 @@
             android:name=".HelpActivity"
             android:label="@string/title_activity_help" >
         </activity>
+        <activity
+            android:name=".CreateNewActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -8,6 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
 public class MyActivity extends Activity {
 
     @Override
@@ -44,5 +50,20 @@ public class MyActivity extends Activity {
     public void goToHelpActivity (View v){
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
+    }
+    public void MakeServer(){
+        try{
+            ServerSocket serversoket = new ServerSocket(5000);
+            while(true){
+                Socket sock = serversoket.accept();
+                PrintWriter printwriter = new PrintWriter(sock.getOutputStream());
+                printwriter.println("Hello Kitti");
+                printwriter.close();
+            }
+        }
+        catch(IOException ex){
+            ex.printStackTrace();
+        }
+
     }
 }
