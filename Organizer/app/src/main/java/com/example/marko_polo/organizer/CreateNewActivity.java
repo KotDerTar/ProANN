@@ -17,10 +17,10 @@ import java.net.Socket;
 /**
  * Created by Marko_Polo on 21.11.2014.
  */
-public class CreateNewActivity {
+public class CreateNewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_create_new);
     }
 }
