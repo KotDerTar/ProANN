@@ -37,17 +37,27 @@ public class CreateNewActivity extends Activity {
         setContentView(R.layout.activity_create_new);
         L1 = (LinearLayout) findViewById(R.id.CreateNew);
         Button but = (Button) findViewById(R.id.start);
-
+        but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View v1 = L1.getRootView();
+                v1.setDrawingCacheEnabled(true);
+                Bitmap bm = v1.getDrawingCache();
+                BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
+                image = (ImageView) findViewById(R.id.imageViewSC);
+                image.setBackgroundDrawable(bitmapDrawable);
+            }
+        });
     }
-    public void onClick(View v){
-        View v1 = L1.getRootView();
+    /*public void onClick(View v){
+       /* View v1 = L1.getRootView();
         v1.setDrawingCacheEnabled(true);
         Bitmap bm = v1.getDrawingCache();
         BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
         image = (ImageView) findViewById(R.id.CreateNew);
-        image.setBackgroundDrawable(bitmapDrawable); }
-   /* public void MakeServer(){
-        try{
+        image.setBackgroundDrawable(bitmapDrawable); */
+   //public void MakeServer(){
+       /* try{
             ServerSocket serversoket = new ServerSocket(5000);
             while(true){
                 Socket sock = serversoket.accept();
