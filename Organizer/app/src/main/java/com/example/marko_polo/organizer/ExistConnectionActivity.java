@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -47,6 +50,7 @@ public class ExistConnectionActivity extends Activity {
             }
         });
     }
+
 
     public void goBackToMyActivity (View v) {
         Intent intent = new Intent(this, MyActivity.class);
