@@ -55,7 +55,7 @@ public class ExistConnectionActivity extends Activity {
 
     public void makeExistConnection () {
         try{
-            Socket s = new Socket ("192.168.195.1", 5000);
+            Socket s = new Socket ("192.168.195.50", 5000);
             InputStreamReader streamReader = new InputStreamReader(s.getInputStream());
             BufferedReader reader = new BufferedReader(streamReader);
 
