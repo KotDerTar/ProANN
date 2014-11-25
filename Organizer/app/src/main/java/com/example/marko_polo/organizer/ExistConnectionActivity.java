@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -46,6 +49,30 @@ public class ExistConnectionActivity extends Activity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case R.id.minimize:
+                Toast.makeText(this, "Minimize", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.close:
+                System.exit(0);
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void goBackToMyActivity (View v) {

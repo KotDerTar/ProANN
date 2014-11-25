@@ -17,9 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Button;
 import android.graphics.Bitmap; import android.graphics.drawable.BitmapDrawable;
-
-
-
+import android.widget.Toast;
 
 
 /**
@@ -49,6 +47,29 @@ public class CreateNewActivity extends Activity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+
+            case R.id.minimize:
+                Toast.makeText(this, "Minimize", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.close:
+                System.exit(0);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     /*public void onClick(View v){
        /* View v1 = L1.getRootView();
         v1.setDrawingCacheEnabled(true);
