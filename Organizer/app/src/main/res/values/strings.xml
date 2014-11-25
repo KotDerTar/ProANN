@@ -5,7 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_help">HelpActivity</string>
-    <string name="item_minimize">Згорнути</string>
-    <string name="item_close">Закрити</string>
+
 
 </resources>
