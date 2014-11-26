@@ -21,7 +21,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Button;
 import android.graphics.Bitmap; import android.graphics.drawable.BitmapDrawable;
+<<<<<<< HEAD
 import android.widget.TextView;
+=======
+import android.widget.Toast;
+>>>>>>> c387913dd7e994df222fec9dadd7f347feef8115
 
 
 /**
@@ -52,8 +56,32 @@ public class CreateNewActivity extends Activity {
             }
         });*/
     }
+<<<<<<< HEAD
     public void onClick(View v){
         MakeServer();
+=======
+
+
+    /*public void onClick(View v){
+       /* View v1 = L1.getRootView();
+        v1.setDrawingCacheEnabled(true);
+        Bitmap bm = v1.getDrawingCache();
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
+        image = (ImageView) findViewById(R.id.CreateNew);
+        image.setBackgroundDrawable(bitmapDrawable); */
+   //public void MakeServer(){
+       /* try{
+            ServerSocket serversoket = new ServerSocket(5000);
+            while(true){
+                Socket sock = serversoket.accept();
+                PrintWriter printwriter = new PrintWriter(sock.getOutputStream());
+                printwriter.println("Hello Kitti");
+                printwriter.close();
+            }
+        }
+        catch(IOException ex){
+            ex.printStackTrace();
+>>>>>>> c387913dd7e994df222fec9dadd7f347feef8115
         }
    public void MakeServer(){
        int port = 6666; // случайный порт (может быть любое число от 1025 до 65535)

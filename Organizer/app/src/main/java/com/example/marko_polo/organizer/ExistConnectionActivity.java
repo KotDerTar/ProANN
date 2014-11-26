@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -48,6 +51,7 @@ public class ExistConnectionActivity extends Activity {
         });
     }
 
+
     public void goBackToMyActivity (View v) {
         Intent intent = new Intent(this, MyActivity.class);
         startActivity(intent);
@@ -55,7 +59,7 @@ public class ExistConnectionActivity extends Activity {
 
     public void makeExistConnection () {
         try{
-            Socket s = new Socket ("192.168.195.1", 5000);
+            Socket s = new Socket ("192.168.195.50", 5000);
             InputStreamReader streamReader = new InputStreamReader(s.getInputStream());
             BufferedReader reader = new BufferedReader(streamReader);
 
