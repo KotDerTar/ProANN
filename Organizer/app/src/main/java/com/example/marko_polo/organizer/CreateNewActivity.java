@@ -39,23 +39,24 @@ public class CreateNewActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_new);
-        /*L1 = (LinearLayout) findViewById(R.id.CreateNew);
+        L1 = (LinearLayout) findViewById(R.id.CreateNew);
         Button but = (Button) findViewById(R.id.start);
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MakeServer();
-                View v1 = L1.getRootView();
+                //View v1 = L1.getRootView();
+                View v1 = getWindow().getDecorView().getRootView();
                 v1.setDrawingCacheEnabled(true);
                 Bitmap bm = v1.getDrawingCache();
                 BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
-                image = (ImageView) findViewById(R.id.imageViewSC);
+                image = (ImageView) findViewById(R.id.imageView);
                 image.setBackgroundDrawable(bitmapDrawable);
             }
-        });*/
+        });
     }
 
-    public void onClick(View v){
+   /* public void onClick(View v){
         MakeServer();
 
 
@@ -65,21 +66,10 @@ public class CreateNewActivity extends Activity {
         Bitmap bm = v1.getDrawingCache();
         BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
         image = (ImageView) findViewById(R.id.CreateNew);
-        image.setBackgroundDrawable(bitmapDrawable); */
-   //public void MakeServer(){
-       /* try{
-            ServerSocket serversoket = new ServerSocket(5000);
-            while(true){
-                Socket sock = serversoket.accept();
-                PrintWriter printwriter = new PrintWriter(sock.getOutputStream());
-                printwriter.println("Hello Kitti");
-                printwriter.close();
-            }
-        }
-        catch(IOException ex){
-            ex.printStackTrace();*/
+        image.setBackgroundDrawable(bitmapDrawable);
 
-        }
+
+        }*/
    public void MakeServer(){
        int port = 6666; // случайный порт (может быть любое число от 1025 до 65535)
        try {
