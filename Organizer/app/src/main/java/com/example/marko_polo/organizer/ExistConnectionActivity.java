@@ -57,6 +57,11 @@ public class ExistConnectionActivity extends Activity {
         startActivity(intent);
     }
 
+    public  void goToProjectorActivity (View v) {
+        Intent intent = new Intent(this, ProjectorActivity.class);
+        startActivity(intent);
+    }
+
     public void makeExistConnection () {
         try{
             Socket s = new Socket ("192.168.195.50", 5000);

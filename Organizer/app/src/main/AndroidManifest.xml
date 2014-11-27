@@ -25,6 +25,9 @@
         <activity
             android:name=".CreateNewActivity">
         </activity>
+        <activity android:name=".ProjectorActivity">
+
+        </activity>
     </application>
 
 </manifest>
