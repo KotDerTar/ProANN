@@ -21,11 +21,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Button;
 import android.graphics.Bitmap; import android.graphics.drawable.BitmapDrawable;
-<<<<<<< HEAD
+
 import android.widget.TextView;
-=======
-import android.widget.Toast;
->>>>>>> c387913dd7e994df222fec9dadd7f347feef8115
+
 
 
 /**
@@ -56,10 +54,9 @@ public class CreateNewActivity extends Activity {
             }
         });*/
     }
-<<<<<<< HEAD
+
     public void onClick(View v){
         MakeServer();
-=======
 
 
     /*public void onClick(View v){
@@ -80,8 +77,8 @@ public class CreateNewActivity extends Activity {
             }
         }
         catch(IOException ex){
-            ex.printStackTrace();
->>>>>>> c387913dd7e994df222fec9dadd7f347feef8115
+            ex.printStackTrace();*/
+
         }
    public void MakeServer(){
        int port = 6666; // случайный порт (может быть любое число от 1025 до 65535)
