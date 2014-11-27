@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-/**
- * Created by Natasha on 27.11.2014.
- */
+
 public class ProjectorActivity extends Activity {
 
     ImageView projectorImg;
