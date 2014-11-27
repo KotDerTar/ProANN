@@ -23,10 +23,10 @@
         android:layout_weight="0.18" />
 
     <ImageView
-        android:layout_width="223dp"
+        android:layout_width="369dp"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.51" />
+        android:layout_weight="0.85" />
 
 </LinearLayout>
