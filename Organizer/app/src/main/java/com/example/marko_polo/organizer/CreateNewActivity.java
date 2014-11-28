@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -17,6 +18,8 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.Buffer;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Button;
@@ -94,14 +97,21 @@ public class CreateNewActivity extends Activity {
            String line = null;
            while(true) {
                line = in.readUTF(); // ожидаем пока клиент пришлет строку текста.
+
                TextShowState.setText("The dumb client just sent me this line : " + line);
                //System.out.println("The dumb client just sent me this line : " + line);
                //System.out.println("I'm sending it back...");
-               out.writeUTF(line); // отсылаем клиенту обратно ту самую строку текста.
+               View v1 = getWindow().getDecorView().getRootView();
+               v1.setDrawingCacheEnabled(true);
+               Bitmap bm = v1.getDrawingCache();
+               ByteArrayOutputStream bos = new ByteArrayOutputStream();
+               bm.compress(Bitmap.CompressFormat.PNG, 0, bos);
+
+               out.write(bos.toByteArray()); // отсылаем клиенту обратно ту самую строку текста.
                out.flush(); // заставляем поток закончить передачу данных.
                TextShowState.setText("Waiting for the next line...");
                //System.out.println("Waiting for the next line...");
-               System.out.println();
+               //System.out.println();
            }
        } catch(Exception x) { x.printStackTrace(); }
    }
