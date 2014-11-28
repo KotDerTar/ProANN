@@ -35,7 +35,11 @@ public class MyActivity extends Activity {
         L1 = (LinearLayout) findViewById(R.id.CreateNew);
         Button but = (Button) findViewById(R.id.start);
         startANNImg = (ImageView)findViewById(R.id.imgStartANN);
+<<<<<<< HEAD
        // startANNImg.setImageResource(R.drawable.startANN);
+=======
+        startANNImg.setImageResource(R.drawable.start_ann);
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
     }
 
 

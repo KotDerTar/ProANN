@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+<<<<<<< HEAD
 import java.io.IOException;
 
+=======
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
 
 public class ProjectorActivity extends Activity {
 
@@ -16,6 +19,7 @@ public class ProjectorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projector);
 
+<<<<<<< HEAD
 
         projectorImg = (ImageView)findViewById(R.id.imgProjector);
         makeExistConnection ();
@@ -32,5 +36,9 @@ public class ProjectorActivity extends Activity {
         }
 
 
+=======
+        projectorImg = (ImageView)findViewById(R.id.imgProjector);
+        projectorImg.setImageResource(R.drawable.spider_yes_colored);
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
     }
 }

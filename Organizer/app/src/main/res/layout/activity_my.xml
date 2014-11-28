@@ -29,7 +29,11 @@
         android:onClick="goToExistConnectionActivity"
         android:layout_marginRight="65dp"
         android:background="@drawable/rounded"
+<<<<<<< HEAD
         android:textColor="#ff0400dd" />
+=======
+        android:textColor="#ff0d1164" />
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
 
     <Button
         android:layout_width="wrap_content"
@@ -47,6 +51,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/imgStartANN"
         android:layout_marginTop="20dp"
+<<<<<<< HEAD
          />
+=======
+        android:src="@drawable/start_ann" />
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
 
 </LinearLayout>

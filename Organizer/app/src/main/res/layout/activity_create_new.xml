@@ -13,4 +13,23 @@
         android:layout_gravity="center_horizontal"
         android:onClick="onClick" />
 
+<<<<<<< HEAD
+=======
+    <TextView
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/textViewWorkingState"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.18" />
+
+    <ImageView
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.85" />
+
+>>>>>>> b894dcde7c17c7a52700d725390c1059040406f4
 </LinearLayout>
