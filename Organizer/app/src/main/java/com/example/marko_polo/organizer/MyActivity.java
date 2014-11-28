@@ -26,13 +26,16 @@ import java.net.Socket;
 
 public class MyActivity extends Activity {
     LinearLayout L1;
-    ImageView image;
+    ImageView startANNImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         L1 = (LinearLayout) findViewById(R.id.CreateNew);
         Button but = (Button) findViewById(R.id.start);
+        startANNImg = (ImageView)findViewById(R.id.imgStartANN);
+        startANNImg.setImageResource(R.drawable.startANN);
     }
 
 
@@ -49,12 +52,4 @@ public class MyActivity extends Activity {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
     }
-   /* public void onClick(View v){
-        View v1 = L1.getRootView();
-        v1.setDrawingCacheEnabled(true);
-        Bitmap bm = v1.getDrawingCache();
-        BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
-        image = (ImageView) findViewById(R.id.CreateNew);
-        image.setBackgroundDrawable(bitmapDrawable); }*/
-
 }

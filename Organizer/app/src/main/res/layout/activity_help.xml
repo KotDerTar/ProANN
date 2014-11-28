@@ -10,7 +10,7 @@
     android:onClick="goToMyActivity">
 
     <TextView
-        android:text="This project lets you show your screen on all connected devices (smartphones, laptops, tablets) and has the counting function of user connections."
+        android:text="Ця програма дозволяє відображати Ваш екран на будь-якому підключеному пристрою (планшет чи смартфон) й має можливість підрахунку кількості підключених користувачів. Вона може стати у нагоді, якщо Ви бажаєте переглянути Ваші фото з великою компанією друзів або , якщо Ви викладач, розповісти цікавіше Вашу лекцію."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtHelp"
