@@ -1,13 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.marko_polo.organizer.HelpActivity"
-    android:onClick="goToMyActivity">
+    android:onClick="goToMyActivity"
+    android:background="#6d7ff2ff"
+    android:id="@+id/">
 
     <TextView
         android:text="Ця програма дозволяє відображати Ваш екран на будь-якому підключеному пристрою (планшет чи смартфон) й має можливість підрахунку кількості підключених користувачів. Вона може стати у нагоді, якщо Ви бажаєте переглянути Ваші фото з великою компанією друзів або , якщо Ви викладач, розповісти цікавіше Вашу лекцію."
@@ -16,7 +18,10 @@
         android:id="@+id/txtHelp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:textColor="#ff0d1164"
+        android:textSize="18dip" />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,6 +32,17 @@
         android:onClick="goToMyActivity"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rounded"
+        android:textColor="#ff0400dd" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgHelp"
+        android:layout_alignTop="@+id/btnBackToMyActivity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="83dp" />
 
 </RelativeLayout>

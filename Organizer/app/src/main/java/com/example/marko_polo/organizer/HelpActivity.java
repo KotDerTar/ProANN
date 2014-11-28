@@ -6,15 +6,20 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
 public class HelpActivity extends Activity {
 
+    ImageView helpImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
+        helpImg = (ImageView)findViewById(R.id.imgHelp);
+        helpImg.setImageResource(R.drawable.help_ann);
     }
 
 
