@@ -9,7 +9,7 @@
     tools:context="com.example.marko_polo.organizer.HelpActivity"
     android:onClick="goToMyActivity"
     android:background="#6d7ff2ff"
-    android:id="@+id/">
+    android:id="@+id/activity_help">
 
     <TextView
         android:text="Ця програма дозволяє відображати Ваш екран на будь-якому підключеному пристрою (планшет чи смартфон) й має можливість підрахунку кількості підключених користувачів. Вона може стати у нагоді, якщо Ви бажаєте переглянути Ваші фото з великою компанією друзів або , якщо Ви викладач, розповісти цікавіше Вашу лекцію."
@@ -28,13 +28,14 @@
         android:layout_height="wrap_content"
         android:text="ПОВЕРНУТИСЯ"
         android:id="@+id/btnBackToMyActivity"
-        android:layout_marginBottom="186dp"
         android:onClick="goToMyActivity"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="false"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/rounded"
-        android:textColor="#ff0400dd" />
+        android:textColor="#ff0400dd"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="250dp" />
 
     <ImageView
         android:layout_width="wrap_content"

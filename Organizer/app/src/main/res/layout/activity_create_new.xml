@@ -3,7 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
-    android:id="@+id/CreateNew">
+    android:id="@+id/CreateNew"
+    android:background="#6d7ff2ff">
 
     <Button
         android:layout_width="wrap_content"
@@ -11,7 +12,9 @@
         android:text="ЗАПУСТИТИ"
         android:id="@+id/start"
         android:layout_gravity="center_horizontal"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:background="@drawable/rounded"
+        android:textColor="#ff0400dd" />
 
     <TextView
         android:layout_width="279dp"

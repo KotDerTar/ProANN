@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.text.Editable;
@@ -30,7 +31,8 @@ import java.net.Socket;
 
 public class ExistConnectionActivity extends Activity {
 
-    EditText nameTxt, linkTxt, emailTxt;
+    EditText nameTxt, ipAddressTxt, portTxt;
+    ImageView spiderwebImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +40,12 @@ public class ExistConnectionActivity extends Activity {
         setContentView(R.layout.activity_exist_connection);
 
         nameTxt = (EditText) findViewById(R.id.txtName);
-        linkTxt = (EditText) findViewById(R.id.txtLink);
-        emailTxt = (EditText) findViewById(R.id.txtEmail);
+        ipAddressTxt = (EditText) findViewById(R.id.txtIPAddress);
+        portTxt = (EditText) findViewById(R.id.txtPort);
         final Button makeExistConnectionBtn = (Button) findViewById(R.id.btnMakeExistConnection);
+
+        spiderwebImg = (ImageView)findViewById(R.id.imgSpiderWeb);
+        spiderwebImg.setImageResource(R.drawable.spiderweb);
 
         nameTxt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -51,6 +56,7 @@ public class ExistConnectionActivity extends Activity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 makeExistConnectionBtn.setEnabled(!nameTxt.getText().toString().trim().isEmpty());
+                makeExistConnectionBtn.setTextColor(Color.parseColor("#ff0400dd"));
             }
 
             @Override

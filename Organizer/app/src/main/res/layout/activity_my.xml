@@ -29,7 +29,7 @@
         android:onClick="goToExistConnectionActivity"
         android:layout_marginRight="65dp"
         android:background="@drawable/rounded"
-        android:textColor="#ff0d1164" />
+        android:textColor="#ff0400dd" />
 
     <Button
         android:layout_width="wrap_content"

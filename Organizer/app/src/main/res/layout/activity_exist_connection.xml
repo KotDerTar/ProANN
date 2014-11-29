@@ -2,7 +2,9 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#6d7ff2ff"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,7 +13,8 @@
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
         android:text="Під'єднання до існуючого підключення"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#ff0d1164" />
 
     <EditText
         android:layout_width="match_parent"
@@ -20,23 +23,29 @@
         android:ems="10"
         android:id="@+id/txtName"
         android:layout_marginTop="15dp"
-        android:hint="Ваше ім'я" />
+        android:hint="Ваше ім'я"
+        android:textColorHint="#ffffffff"
+        android:textColor="#ff0d1164" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtLink"
+        android:id="@+id/txtIPAddress"
         android:layout_marginTop="15dp"
-        android:hint="Посилання" />
+        android:hint="IP адреса"
+        android:textColorHint="#ffffffff"
+        android:textColor="#ff0d1164" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtPort"
         android:layout_marginTop="15dp"
-        android:hint="Ваша пошта" />
+        android:hint="Порт"
+        android:inputType="number"
+        android:textColorHint="#ffffffff"
+        android:textColor="#ff0d1164" />
 
     <Button
         android:layout_width="wrap_content"
@@ -46,13 +55,24 @@
         android:layout_gravity="right"
         android:layout_marginTop="15dp"
         android:enabled="false"
-        android:onClick="goToProjectorActivity" />
+        android:onClick="goToProjectorActivity"
+        android:background="@drawable/rounded" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Повернутися"
         android:id="@+id/txtHelp"
-        android:layout_marginTop="150dp"
-        android:onClick="goBackToMyActivity" />
+        android:layout_marginTop="10dp"
+        android:onClick="goBackToMyActivity"
+        android:background="@drawable/rounded"
+        android:textColor="#ff0400dd" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSpiderWeb"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp" />
+
 </LinearLayout>
