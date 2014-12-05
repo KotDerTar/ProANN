@@ -21,23 +21,19 @@ $Data=1234;
     $db = new DB_CONNECT();
 
     // mysql update row with matched pid
-    $result = mysql_query("DELETE FROM Server WHERE Id_Server = $Id_Server")&&mysql_query("DELETE FROM Users WHERE Id_Server = $Id_Server");
+    $result = mysql_query("SELECT `Id_Server`, `Data` FROM `Server` WHERE Id_Server = $Id_Server");
+
     
-    // check if row deleted or not
-    if (mysql_affected_rows() > 0) {
+     // check if row inserted or not
+    if ($result) {
         // successfully updated
         $response["success"] = 1;
-        $response["message"] = "Data successfully deleted";
-
+        $response["message"] = "Data successfully updated.";
+        
         // echoing JSON response
         echo json_encode($response);
     } else {
-        // no product found
-        $response["success"] = 0;
-        $response["message"] = "Data not found";
-
-        // echo no users JSON
-        echo json_encode($response);
+        
     }
 } else {
     // required field is missing

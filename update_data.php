@@ -1,8 +1,7 @@
 <?php
 
 /*
- * Following code will delete a product from table
- * A product is identified by product id (pid)
+ * Following code will update a data from table
  */
 
 // array for JSON response
