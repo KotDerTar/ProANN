@@ -19,6 +19,8 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.Buffer;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -36,6 +38,9 @@ public class CreateNewActivity extends Activity {
     LinearLayout L1;
     ImageView image;
 
+    private Timer mTimer;
+    private MyTimerTask mMyTimerTask;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,21 +53,45 @@ public class CreateNewActivity extends Activity {
             @Override
             public void onClick(View view) {
                 MakeServer();
+                mTimer = new Timer();
+                mMyTimerTask = new MyTimerTask();
+                mTimer.schedule(mMyTimerTask, 30000);
+                mTimer = null;
                 //View v1 = L1.getRootView();
-                View v1 = getWindow().getDecorView().getRootView();
+                /*View v1 = getWindow().getDecorView().getRootView();
                 v1.setDrawingCacheEnabled(true);
                 /*Bitmap bm = v1.getDrawingCache();
                 BitmapDrawable bitmapDrawable = new BitmapDrawable(bm);
                 image = (ImageView) findViewById(R.id.imageView);
                 image.setBackgroundDrawable(bitmapDrawable);*/
-                Bitmap bmap = Bitmap.createBitmap(v1.getDrawingCache());
+                /*Bitmap bmap = Bitmap.createBitmap(v1.getDrawingCache());
                 v1.setDrawingCacheEnabled(false);
                 BitmapDrawable bitmapDrawable = new BitmapDrawable(bmap);
                 image = (ImageView) findViewById(R.id.imageView);
-                image.setBackgroundDrawable(bitmapDrawable);
+                image.setBackgroundDrawable(bitmapDrawable);*/
 
             }
         });
+    }
+
+    public class MyTimerTask extends TimerTask {
+
+        @Override
+        public void run() {
+            View v1 = getWindow().getDecorView().findViewById(android.R.id.content);
+            v1.setDrawingCacheEnabled(true);
+            final Bitmap bmap = Bitmap.createBitmap(v1.getDrawingCache());
+            v1.setDrawingCacheEnabled(false);
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    BitmapDrawable bitmapDrawable = new BitmapDrawable(bmap);
+                    image = (ImageView) findViewById(R.id.imageView);
+                    image.setBackgroundDrawable(bitmapDrawable);
+                }
+            });
+        }
     }
 
    /* public void onClick(View v){
